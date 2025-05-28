@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react"
-
+import Image from "next/image"
 export default function Footer() {
   return (
     <footer className="bg-zinc-900 text-white">
@@ -9,8 +9,14 @@ export default function Footer() {
           {/* Company Info */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-ipets-red to-ipets-cyan rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg">iP</span>
+              <div className="w-10 h-10  rounded-xl flex items-center justify-center">
+                 <Image
+                           src="/logo.png"
+                           alt="Logo "
+                           width={1200}
+                           height={1200}
+                           className="w-full h-full object-cover"
+                         />
               </div>
               <span className="font-bold text-xl">iPets Engineering</span>
             </div>

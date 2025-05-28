@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -23,8 +24,17 @@ export default function Header() {
         <div className="flex justify-between items-center py-3 sm:py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 sm:space-x-3">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-ipets-red to-ipets-cyan rounded-xl flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-lg sm:text-xl">iP</span>
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shadow-lg">
+            
+            <Image
+            src="/logo.png"
+            alt="Logo "
+            width={1200}
+            height={1200}
+            className="w-full h-full object-cover"
+          />
+            
+              
             </div>
             <div>
               <div className="text-zinc-900 font-bold text-lg sm:text-xl">iPets Engineering</div>
